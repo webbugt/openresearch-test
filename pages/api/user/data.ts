@@ -31,5 +31,38 @@ export const HARDCODED_TRANSACTIONS = [
         type: "active",
         amount: -240.00,
         date: "2014-12 - 20T21: 20: 56.891000Z"
-    }
+    },
+    {
+        id: 6,
+        type: "sent",
+        amount: 600.00,
+        date: "2014-12 - 20T10: 19: 20.891000Z"
+    },
+    {
+        id: 8,
+        type: "sent",
+        amount: 600.00,
+        date: "2014-12 - 20T11: 19: 20.891000Z"
+    },
+    {
+        id: 32,
+        type: "sent",
+        amount: 300.00,
+        date: "2014-12 - 20T11: 19: 20.891000Z"
+    },
+    {
+        id: 41,
+        type: "sent",
+        amount: 200.00,
+        date: "2014-12 - 20T11: 19: 20.891000Z"
+    },
 ]
+
+export const USER_IMAGES = {
+    "1": "/users/user1.png",
+    "2": "/users/user2.png",
+    "3": "/users/user3.png",
+    "4": "/users/user1.png",
+    "5": "/users/user2.png",
+    "6": "/users/user3.png",
+}
