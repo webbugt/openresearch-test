@@ -1,0 +1,11 @@
+@import '../styles/variables.scss';
+
+.title {
+    font-size: $text-size-base;
+    color: $primary-900;
+
+}
+
+.disabled {
+    color: $primary-50
+}
