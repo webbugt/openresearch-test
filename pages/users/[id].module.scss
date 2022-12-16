@@ -1,0 +1,13 @@
+.main {
+    grid-area: main;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: "430px auto";
+    grid-template-areas: "sidebar main";
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
