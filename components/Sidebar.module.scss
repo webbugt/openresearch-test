@@ -11,6 +11,11 @@
     &:last-of-type {
         margin-bottom: 0;
     }
+
+}
+
+.shadow {
+    filter: drop-shadow(6px 8px 10px rgba(123, 97, 255, 0.2));
 }
 
 .header {

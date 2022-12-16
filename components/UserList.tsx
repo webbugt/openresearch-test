@@ -1,5 +1,4 @@
 import ProfileImage from "./ProfileImage"
-
 import styles from './UserList.module.scss'
 export type User = {
     image?: string,
@@ -8,11 +7,9 @@ export type User = {
     }
 
 export const UserList = ({users}:{users:User[]}) => {
-    return (
-        <div className={styles.container}>
+    return   <div className={styles.container}>
             {users.map((user, i) => <ProfileImage key={user.name+i} image={user.image} name={user.name}/>)}
         </div>
-    )
 }
 
 export default UserList

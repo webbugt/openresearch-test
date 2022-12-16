@@ -5,11 +5,12 @@ import { Icon } from './Icon'
 import ProfileImage from './ProfileImage'
 
 import styles from './Sidebar.module.scss'
+import Title from './Title'
 import UserList from './UserList'
 
-const Row = ({children, className}:PropsWithChildren<{className?:string}>) =>{
+const Row = ({children, className, shadow}:PropsWithChildren<{className?:string, shadow?:boolean}>) =>{
     return (
-        <div className={clsx(styles.row, className)}>
+        <div className={clsx(styles.row, className, shadow && styles.shadow)}>
             {children}
         </div>
     )
@@ -41,9 +42,16 @@ const Sidebar = ({id}:SidebarProps) =>{
             <Row className={styles.header}>
                 <Icon variant="notification" size={54}/>
                 <ProfileImage image={data.image} size={50} hasBorder/></Row>
-            <Row>Card goes here</Row>
-            <Row><UserList users={historyUsers}/></Row>
-            <Row>Recent activity / transactions</Row>
+            <Row shadow>
+                <Title>Your Card</Title>
+                Card goes here
+                </Row>
+            <Row>
+                <Title>Send Again</Title>
+                <UserList users={historyUsers}/>
+                </Row>
+            <Row>
+                <Title>Recent Activity</Title></Row>
            <div>{JSON.stringify(data)}</div>
         </div>
     )
