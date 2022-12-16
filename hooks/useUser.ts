@@ -7,4 +7,4 @@ export const useUser = (id?:string) => useQuery('user/' + id, () =>
     axios.get(ENDPOINT + id).then(res =>
         res.data
     )
-)
+)   

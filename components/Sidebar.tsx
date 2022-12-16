@@ -17,12 +17,14 @@ type SidebarProps = {
 }
 const Sidebar = ({id}:SidebarProps) =>{
     const { isLoading, error, data } = useUser(id)
+    
     const historyUsers = useMemo(()=>{
         const transactions = data?.transactions || []
         const users = transactions.filter((t: any) => t?.id).map((t: any) => ({ ...t, date: new Date(t.date) })).slice(0, 5)
         return users.map(({id, image, name}:any) => ({id, image, name}))
     },[data])
-    console.log(historyUsers)
+
+
     if(!id){
         return <h2>User needs to login</h2>
     }
