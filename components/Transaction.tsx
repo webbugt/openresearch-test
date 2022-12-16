@@ -31,7 +31,7 @@ export const Transaction = ({ type, date, amount, title  }: TransactionProps) =>
     const parsedAmount = useMemo(()=>{
         const isNegative = amount < 0
         const parsedAmount = parseFloat(Math.abs(amount).toString()).toFixed(2)
-        return  `${isNegative ? "-" : ""}$${parsedAmount}`
+        return `${isNegative ? "-" : "+"}\u00A0$${parsedAmount}`
     },[amount])
 
     return <div className={clsx(styles.container)}>
