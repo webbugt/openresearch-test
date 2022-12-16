@@ -1,11 +1,30 @@
 @import '../styles/variables.scss';
 
-.title {
-    font-size: $text-size-base;
-    color: $primary-900;
 
+.base {
+    font-size: $text-size-base;
+}
+
+.large {
+    font-size: $text-size-large;
+}
+
+.xl {
+    font-size: $text-size-xl;
+}
+
+.title {
+    color: $primary-900;
 }
 
 .disabled {
     color: $primary-50
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 600;
 }
