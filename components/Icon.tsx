@@ -9,7 +9,7 @@ const IconVariant = {
     "SPARK":"spark"
 } as const
 
-type IconVariant = typeof IconVariant[keyof typeof IconVariant]
+export type IconVariant = typeof IconVariant[keyof typeof IconVariant]
 
 const IconFileNameMap:{[k in IconVariant]:string} = {
     "notification": "/icons/notification.svg",

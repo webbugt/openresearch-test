@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    flex: 1 1 100%;
+}
+
+.title {
+    margin-bottom: 8px;
+}
+
+.price {
+    margin-left: 18px;
+}
