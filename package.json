@@ -17,6 +17,7 @@
     "@types/react-query": "^1.2.9",
     "@types/sass": "^1.43.1",
     "axios": "^1.2.1",
+    "clsx": "^1.2.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.7",
     "next": "13.0.7",
