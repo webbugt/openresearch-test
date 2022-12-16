@@ -1,13 +1,15 @@
+import clsx from 'clsx'
 import { PropsWithChildren, useMemo } from 'react'
 import { useUser } from '../hooks/useUser'
+import { Icon } from './Icon'
 import ProfileImage from './ProfileImage'
 
 import styles from './Sidebar.module.scss'
 import UserList from './UserList'
 
-const Row = ({children}:PropsWithChildren<{}>) =>{
+const Row = ({children, className}:PropsWithChildren<{className?:string}>) =>{
     return (
-        <div className={styles.row}>
+        <div className={clsx(styles.row, className)}>
             {children}
         </div>
     )
@@ -17,7 +19,7 @@ type SidebarProps = {
 }
 const Sidebar = ({id}:SidebarProps) =>{
     const { isLoading, error, data } = useUser(id)
-    
+
     const historyUsers = useMemo(()=>{
         const transactions = data?.transactions || []
         const users = transactions.filter((t: any) => t?.id).map((t: any) => ({ ...t, date: new Date(t.date) })).slice(0, 5)
@@ -36,7 +38,9 @@ const Sidebar = ({id}:SidebarProps) =>{
     }
     return (
         <div className={styles.container}>
-            <Row><ProfileImage image={data.image} size={50} hasBorder/></Row>
+            <Row className={styles.header}>
+                <Icon variant="notification" size={54}/>
+                <ProfileImage image={data.image} size={50} hasBorder/></Row>
             <Row>Card goes here</Row>
             <Row><UserList users={historyUsers}/></Row>
             <Row>Recent activity / transactions</Row>
