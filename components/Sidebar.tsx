@@ -6,6 +6,7 @@ import ProfileImage from './ProfileImage'
 
 import styles from './Sidebar.module.scss'
 import Title from './Title'
+import Transaction from './Transaction'
 import UserList from './UserList'
 
 const Row = ({children, className, shadow}:PropsWithChildren<{className?:string, shadow?:boolean}>) =>{
@@ -51,8 +52,12 @@ const Sidebar = ({id}:SidebarProps) =>{
                 <UserList users={historyUsers}/>
                 </Row>
             <Row>
-                <Title>Recent Activity</Title></Row>
-           <div>{JSON.stringify(data)}</div>
+                <Title>Recent Activity</Title>
+               {data.transactions.map(
+                ({name="Transaction", date, amount, type}:any,i:number) => (<Transaction key={date+name+i} title={name} type={type} amount={amount} date={date}/>)
+                )}
+                
+            </Row>
         </div>
     )
 } 

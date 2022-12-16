@@ -3,58 +3,58 @@ export const HARDCODED_TRANSACTIONS = [
         name: "Shopping",
         type: "expense",
         amount: -800.00,
-        date: "2014-12 - 20T21: 17: 56.891000Z"
+        date: "12 Dec 2021, 08:20 AM"
     },
 
     {
         id: 4,
         type: "recieved",
         amount: 300.00,
-        date: "2014-12 - 20T21: 18: 56.891000Z"
+        date: "10 Dec 2021, 10:30 PM"
     },
     {
         id: 5,
         type: "sent",
         amount: 300.00,
-        date: "2014-12 - 20T21: 19: 20.891000Z"
+        date: "13 Dec 2021, 09:20 AM"
     },
 
     {
         name: "Paypal recieved",
         type: "general",
         amount: 1000.00,
-        date: "2014-12 - 20T21: 19: 56.891000Z"
+        date: "11 Dec 2021, 10:30 PM"
     },
 
     {
         name: "Game Stored",
         type: "active",
         amount: -240.00,
-        date: "2014-12 - 20T21: 20: 56.891000Z"
+        date: "05 Dec 2021, 11:20 AM"
     },
     {
         id: 6,
         type: "sent",
         amount: 600.00,
-        date: "2014-12 - 20T10: 19: 20.891000Z"
+        date: "28 Nov 2021, 11:20 AM"
     },
     {
         id: 8,
         type: "sent",
         amount: 600.00,
-        date: "2014-12 - 20T11: 19: 20.891000Z"
+        date: "05 Dec 2021, 14:20 AM"
     },
     {
         id: 32,
         type: "sent",
         amount: 300.00,
-        date: "2014-12 - 20T11: 19: 20.891000Z"
+        date: "28 Nov 2021, 11:20 AM"
     },
     {
         id: 41,
         type: "sent",
         amount: 200.00,
-        date: "2014-12 - 20T11: 19: 20.891000Z"
+        date: "28 Nov 2021, 11:20 AM"
     },
 ]
 

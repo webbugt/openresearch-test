@@ -4,7 +4,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: "430px auto";
+    grid-template-columns: 430px auto;
     grid-template-areas: "sidebar main";
 }
 
