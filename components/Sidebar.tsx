@@ -1,6 +1,15 @@
+import { PropsWithChildren } from 'react'
 import { useUser } from '../hooks/useUser'
 
+import styles from './Sidebar.module.scss'
 
+const Row = ({children}:PropsWithChildren<{}>) =>{
+    return (
+        <div className={styles.row}>
+            {children}
+        </div>
+    )
+}
 type SidebarProps = {
     id?: string
 }
@@ -16,8 +25,11 @@ const Sidebar = ({id}:SidebarProps) =>{
         return <h2>Error</h2>
     }
     return (
-        <div>
-            <h1>Sidebar for {data.name}</h1>
+        <div className={styles.container}>
+            <Row>Card for {data.name}</Row>
+            <Row>Card goes here</Row>
+            <Row>Repeat transaction/othjer contacts</Row>
+            <Row>Recent activity / transactions</Row>
            <div>{JSON.stringify(data)}</div>
         </div>
     )
