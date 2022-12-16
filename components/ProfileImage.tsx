@@ -15,7 +15,7 @@ export const ProfileImage = ({ image, name, size = 40, hasBorder = false }:{imag
             overflow: "hidden"
         }}
     >
-        {image ? <Image src={image} title={name} alt={name || ""}  fill /> : <div className={styles.name}><span>{shortName || "NN"}</span></div>}
+        {image ? <Image className={styles.image} src={image} title={name} alt={name || ""}  fill /> : <div className={styles.name}><span>{shortName || "NN"}</span></div>}
     </div>
 
 }

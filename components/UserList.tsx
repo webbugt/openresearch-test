@@ -8,7 +8,7 @@ export type User = {
 
 export const UserList = ({users}:{users:User[]}) => {
     return   <div className={styles.container}>
-            {users.map((user, i) => <ProfileImage key={user.name+i} image={user.image} name={user.name}/>)}
+            {users.map((user, i) => <ProfileImage size={54} key={user.name+i} image={user.image} name={user.name}/>)}
         </div>
 }
 
