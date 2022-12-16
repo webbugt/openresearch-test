@@ -51,7 +51,7 @@ const Sidebar = ({id}:SidebarProps) =>{
                 <Title>Send Again</Title>
                 <UserList users={historyUsers}/>
                 </Row>
-            <Row>
+            <Row className={styles.transactions}>
                 <Title>Recent Activity</Title>
                {data.transactions.map(
                 ({name="Transaction", date, amount, type}:any,i:number) => (<Transaction key={date+name+i} title={name} type={type} amount={amount} date={date}/>)
